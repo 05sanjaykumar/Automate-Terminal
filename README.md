@@ -1,6 +1,3 @@
-Absolutely! Here's a clean, professional `README.md` for your project `devops-wizard`. It explains everything clearly and looks good on GitHub or any portfolio:
-
----
 
 ```markdown
 # 🧙‍♂️ devops-wizard
@@ -117,6 +114,3 @@ This project is part of a larger journey into DevOps, automation, and hacker-sty
 
 ```
 
----
-
-Want me to add badges, GitHub Actions, or a cool ASCII logo too? Or should we start building the **next feature** in this toolchain now (like disk usage or backup)?
