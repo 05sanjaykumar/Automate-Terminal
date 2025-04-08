@@ -1,5 +1,3 @@
-
-```markdown
 # 🧙‍♂️ devops-wizard
 
 A lightweight Bash-based DevOps toolkit for monitoring, auto-healing, and notifying about your server and application status — all from your terminal.
@@ -112,5 +110,4 @@ MIT — use freely, break things responsibly.
 
 This project is part of a larger journey into DevOps, automation, and hacker-style systems thinking. Small scripts. Big impact.
 
-```
 
