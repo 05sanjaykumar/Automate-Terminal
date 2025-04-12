@@ -24,7 +24,7 @@ if [ "$STATUS" -ne 200 ]; then
     fi
 
     # Restart the service/application
-    nohup "/Users/sanjaykumar/Documents/vscode projects/Bash Project/Devops-Wizard" &  # Restarts it in the background
+    nohup "/Users/sanjaykumar/Documents/vscode projects/Bash Project/Devops-Wizard/healthcheck.sh" &  # Restarts it in the background
 
     echo "[$(date)] $SERVICE_NAME restarted." >> $LOG_FILE
 
