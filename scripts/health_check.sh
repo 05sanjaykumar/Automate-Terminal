@@ -34,6 +34,7 @@ while [[ $# -gt 0 ]]; do
     shift
   done
     
+check_health(){
 
 # If target contains http or https → treat as URL
 if [[ "$TARGET" == http* ]]; then
@@ -57,4 +58,15 @@ elif [[ "$TARGET" == *:* ]]; then
 
 else
   echo -e "${RED}Invalid input. Please provide a URL or IP:port.${NC}"
+fi
+}
+
+if [ "$WATCH" = true ]; then
+  while true; do
+  check_health
+  echo "Checking again in $INTERVAL seconds..."
+    sleep "$INTERVAL"
+  done
+else
+  check_health
 fi
