@@ -23,6 +23,16 @@ shift
 while [[ $# -gt 0 ]]; do
     case "$1" in
     --watch)
+      WATCH=true;;
+    --interval)
+      shift
+      INTERVAL=$1;;
+      *)
+      echo -e "${RED}Unknown option: $1${NC}"
+      exit 1;;
+    esac
+    shift
+  done
     
 
 # If target contains http or https → treat as URL
