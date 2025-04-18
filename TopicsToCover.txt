@@ -1,0 +1,85 @@
+
+
+## 🗺️ DevOps-Wizard: Phase 1 — Core Features
+
+You’ve already done:
+- ✅ **Service Health Checks**
+- ✅ **Watch Mode (Live Monitoring)**
+
+Now we go deeper:
+
+---
+
+### 🔧 1. **Add Logging to a File**
+> Store health check results in a log file with timestamps.
+
+- Learn: `date`, `>>`, `tee`, log rotation basics
+
+---
+
+### 💽 2. **Disk Usage Alert Script (`disk_check.sh`)**
+> Warns you if disk usage goes above a limit (like 85%).
+
+- Learn: `df -h`, parsing output, conditional alerts
+- Bonus: use `awk` or `cut` to extract values
+
+---
+
+### 📦 3. **Auto Deployment Script**
+> Deploy code to a remote server (via Git, SCP, or rsync)
+
+- Learn: `scp`, `ssh`, `git pull`, passwordless auth
+- Simulates a basic CI/CD deployment
+
+---
+
+### 🔔 4. **Webhook Notifications**
+> Send alerts to Slack, Discord, Telegram, or custom APIs when a service is down.
+
+- Learn: `curl -X POST`, JSON payloads
+- Practical for monitoring and alerting
+
+---
+
+### ⏱️ 5. **Scheduled Backups**
+> Automatically backup certain folders/files on a schedule
+
+- Learn: `cron`, `tar`, `rsync`, timestamps in filenames
+
+---
+
+### 🐳 6. **Dockerize the Project**
+> Package the tool as a Docker container so it can run anywhere
+
+- Learn: `Dockerfile`, `CMD`, volumes, `ENTRYPOINT`
+- Makes your tool portable across machines
+
+---
+
+### 🧪 7. **Add Unit Tests (Bash Style)**
+> Use simple test scripts to validate functionality
+
+- Learn: `bats-core`, custom test cases, CI pipelines
+
+---
+
+### 🧼 8. **Final Touch: One-Command Installer**
+> One script to install and setup everything
+
+- Learn: symbolic links, `$PATH`, shebangs, permission handling
+
+---
+
+## 🧠 Skill Categories You’ll Build
+
+| Skill            | Covered? | Upcoming |
+|------------------|----------|----------|
+| Bash scripting   | ✅       | 🛠️        |
+| System monitoring| ✅       | 🛠️        |
+| Networking tools | ✅       | 🛠️        |
+| Disk management  | ⏳       | ✅        |
+| Remote servers   | ⏳       | ✅        |
+| Cron jobs        | ⏳       | ✅        |
+| Docker           | ⏳       | ✅        |
+| CI/CD basics     | ⏳       | ✅        |
+| Logging & Alerts | ⏳       | ✅        |
