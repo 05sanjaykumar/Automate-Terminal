@@ -62,6 +62,7 @@ fi
 }
 
 if [ "$WATCH" = true ]; then
+  trap "echo -e '\n${RED}Stopped watching.${NC}'; exit" SIGINT
   while true; do
   check_health
   echo "Checking again in $INTERVAL seconds..."
