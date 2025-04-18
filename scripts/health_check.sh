@@ -5,6 +5,9 @@ GREEN="\033[0;32m"
 RED="\033[0;31m"
 NC="\033[0m" # No Color
 
+# Default interval (in seconds)
+INTERVAL=5
+
 # Check if user gave a URL
 if [ -z "$1" ]; then
   echo -e "${RED}Error: No target provided.${NC}"
@@ -15,6 +18,12 @@ if [ -z "$1" ]; then
 fi
 
 TARGET=$1
+shift
+
+while [[ $# -gt 0 ]]; do
+    case "$1" in
+    --watch)
+    
 
 # If target contains http or https → treat as URL
 if [[ "$TARGET" == http* ]]; then
