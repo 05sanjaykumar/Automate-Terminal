@@ -1,4 +1,4 @@
-# 🧙‍♂️ devops-wizard
+# devops wizard toolkit
 
 A lightweight Bash-based DevOps toolkit for monitoring, auto-healing, and notifying about your server and application status — all from your terminal.
 
