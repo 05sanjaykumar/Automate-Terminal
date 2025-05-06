@@ -1,0 +1,8 @@
+services:
+  devops-wizard:
+    build: .
+    container_name: devops-wizard
+    volumes:
+      - ./:/app
+    working_dir: /app
+    tty: true
