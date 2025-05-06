@@ -1,113 +1,127 @@
-# devops wizard toolkit
+## Automate-Terminal
 
-A lightweight Bash-based DevOps toolkit for monitoring, auto-healing, and notifying about your server and application status — all from your terminal.
-
-## 🚀 Features
-
-- 🔍 Health checks for your services or web apps
-- ♻️ Automatic restart on failure
-- 📜 Logging for every action
-- 🔔 Optional Discord Webhook notifications
-- 🕒 Can be scheduled using `cron`
-- 🔧 Fully configurable
+**Automate-Terminal** is a DevOps automation toolkit built to simplify various operations, such as health checks, live monitoring, and automatic deployments. The project provides essential tools to manage server health, disk usage, deployment automation, and more, all through simple scripts.
 
 ---
 
-## 📦 Setup
+### 📝 **Features**
 
-### 1. Clone the Repo
-
-```bash
-git clone https://github.com/yourusername/devops-wizard.git
-cd devops-wizard
-```
-
-### 2. Configure `healthcheck.sh`
-
-Edit the script and update these values:
-
-```bash
-SERVICE_NAME="your-service-name"
-URL="http://localhost:8000"
-LOG_FILE="/var/log/healthcheck.log"
-DISCORD_WEBHOOK="https://discord.com/api/webhooks/..."
-```
-
-### 3. Make it Executable
-
-```bash
-chmod +x healthcheck.sh
-```
+* **Service Health Checks**: Automatically check the health status of your services.
+* **Watch Mode (Live Monitoring)**: Continuously monitor system performance and service uptime.
+* **Disk Usage Alerts**: Get notified when your disk usage exceeds a defined threshold.
+* **Auto Deployment**: Deploy code to a remote server via SSH or Git with ease.
+* **Logging**: Keep track of your operations with logs and timestamps.
 
 ---
 
-## 🧪 Usage
+### 📦 **Requirements**
 
-Run it manually:
+Before you begin, ensure you have the following tools installed on your machine:
 
-```bash
-./healthcheck.sh
-```
-
-Or automate it with a cron job:
-
-```bash
-crontab -e
-```
-
-Add:
-
-```
-* * * * * /full/path/to/healthcheck.sh
-```
+* **Docker** (for containerization)
+* **Docker Compose** (for managing multi-container setups)
+* **Git** (for version control)
 
 ---
 
-## 📄 Output Logs
+### 🚀 **Installation**
 
-All logs are saved at the path you configure (`/var/log/healthcheck.log` by default):
+1. Clone the repository to your local machine:
 
-```
-[2025-04-04 17:33:12] Status code: 500
-[2025-04-04 17:33:12] myapp is down! Restarting...
-[2025-04-04 17:33:13] myapp restarted.
-```
+   ```bash
+   git clone https://github.com/05sanjaykumar/Automate-Terminal.git
+   cd Automate-Terminal
+   ```
 
----
+2. Build and run the project using Docker Compose:
 
-## 🛠️ Requirements
+   ```bash
+   docker-compose up --build
+   ```
 
-- Bash (Any modern Linux distro)
-- `curl`
-- `systemd` (for service control)
-- Optional: Discord webhook URL
+   This will build the Docker container and start the services defined in the `docker-compose.yml` file.
 
 ---
 
-## 📌 Todo (Next Features)
+### ⚙️ **How to Use**
 
-- Disk usage monitoring
-- Automated backup system
-- Docker container deployment
-- CLI wrapper
-- Full config file support
+Once the Docker container is up and running, you can interact with it directly from the terminal. Here are some of the key operations:
+
+1. **Health Check Script**: To run a health check for a specific service, execute:
+
+   ```bash
+   docker exec -it devops-wizard ./scripts/health_check.sh <SERVICE_URL>
+   ```
+
+   Example for checking a website:
+
+   ```bash
+   docker exec -it devops-wizard ./scripts/health_check.sh https://www.example.com
+   ```
+
+2. **Deployment Script**: Deploy your code to a remote server:
+
+   ```bash
+   docker exec -it devops-wizard ./scripts/deploy.sh <LOCAL_PATH> <USER@HOST> <REMOTE_PATH>
+   ```
+
+3. **Disk Usage Alerts**: To check disk usage, use the following:
+
+   ```bash
+   docker exec -it devops-wizard ./scripts/disk_check.sh
+   ```
+
+4. **Log Files**: View logs to track health checks and other operations:
+
+   ```bash
+   docker exec -it devops-wizard tail -f /app/logs/health_check.log
+   ```
 
 ---
 
-## 🙌 Contributions
+### 🔧 **How to Contribute**
 
-PRs and issues are welcome! If you have a cool Bash function or service automation idea, feel free to add it.
+1. Fork the repository.
+2. Create a new branch: `git checkout -b feature-name`.
+3. Make your changes.
+4. Commit your changes: `git commit -m "Description of changes"`.
+5. Push to the branch: `git push origin feature-name`.
+6. Open a pull request.
 
 ---
 
-## 📜 License
+### 📜 **License**
 
-MIT — use freely, break things responsibly.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
 
-## 💡 Inspiration
+### 📢 **Additional Notes**
 
-This project is part of a larger journey into DevOps, automation, and hacker-style systems thinking. Small scripts. Big impact.
+* The project currently uses **Alpine Linux** as the base Docker image for minimal size and fast build times.
+* The `docker-compose.yml` file is set up to mount local scripts and log directories, allowing easy access and modification.
 
+---
+
+This template will give clear instructions on how to set up, use, and contribute to your project. You can modify or expand it based on any additional features or changes you make to the project in the future.
+
+Once you’ve updated your `README.md`, you can push the changes to GitHub:
+
+1. Stage the changes:
+
+   ```bash
+   git add README.md
+   ```
+
+2. Commit the changes:
+
+   ```bash
+   git commit -m "Update README for better user guidance"
+   ```
+
+3. Push the changes:
+
+   ```bash
+   git push origin main
+   ```
 
