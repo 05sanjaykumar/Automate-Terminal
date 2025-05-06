@@ -3,6 +3,7 @@ services:
     build: .
     container_name: devops-wizard
     volumes:
-      - ./:/app
+        - ./scripts:/app/scripts
+        - ./logs:/app/logs
     working_dir: /app
     tty: true

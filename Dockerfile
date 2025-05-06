@@ -14,4 +14,4 @@ COPY scripts/ ./scripts/
 RUN chmod +x ./scripts/*.sh
 
 # Default command (can be overridden)
-CMD ["bash"]
+CMD ["bash", "./scripts/health_check.sh", "https://www.youtube.com"]
