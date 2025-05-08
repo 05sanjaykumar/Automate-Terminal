@@ -1,5 +1,12 @@
 ## Automate-Terminal
 
+
+![Build](https://img.shields.io/github/actions/workflow/status/05sanjaykumar/Automate-Terminal/main.yml?branch=main)
+![Last Commit](https://img.shields.io/github/last-commit/05sanjaykumar/Automate-Terminal)
+![License](https://img.shields.io/github/license/05sanjaykumar/Automate-Terminal)
+![Issues](https://img.shields.io/github/issues/05sanjaykumar/Automate-Terminal)
+![Stars](https://img.shields.io/github/stars/05sanjaykumar/Automate-Terminal)
+
 **Automate-Terminal** is a DevOps automation toolkit built to simplify various operations, such as health checks, live monitoring, and automatic deployments. The project provides essential tools to manage server health, disk usage, deployment automation, and more, all through simple scripts.
 
 ---
